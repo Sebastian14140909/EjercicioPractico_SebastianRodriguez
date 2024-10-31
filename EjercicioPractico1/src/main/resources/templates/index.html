@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/xhtml">
+<head th:replace="~{layout/plantilla :: head}">
+    <title>Farmacia</title>
+    <link rel="stylesheet" type="text/css" href="styles.css"> <!-- Enlace al archivo CSS -->
+</head>
+<body>
+    <header th:replace="~{layout/plantilla :: header}"></header>
+
+    <h1>Bienvenido a su Farmacia de confianza</h1>
+    <p>En nuestra farmacia, nos comprometemos a ofrecer un servicio de excelencia y una diversa selección de medicamentos y productos para la salud. Nuestro propósito es cuidar del bienestar de nuestros clientes mediante un asesoramiento personalizado y la garantía de productos de la más alta calidad.</p>
+
+    <h2>Productos Disponibles</h2>
+    <ul>
+        <li>Antihistamínicos</li>
+        <li>Antidepresivos</li>
+        <li>Antiinflamatorios</li>
+        <li>Antibióticos</li>
+        <li>Analgésicos</li>
+    </ul>
+
+    <h2>Video Informativo sobre el Medicamento "Paracetamol"</h2>
+    <div class="video-container">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/LHX8Y7pqBbc" 
+                title="Video sobre el Paracetamol" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+                encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+    <footer th:replace="~{layout/plantilla :: footer}"></footer>
+</body>
+</html>

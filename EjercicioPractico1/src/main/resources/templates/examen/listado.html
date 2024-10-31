@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Listado de Farmacias</title>
+    <link th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" rel="stylesheet"/>
+</head>
+<body>
+    <header th:replace="~{layout/plantilla :: header}"></header>
+    <div class="container mt-5">
+        <h1>Listado de Farmacias</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="farmacia : ${farmacias}">
+                    <td th:text="${farmacia.id}"></td>
+                    <td th:text="${farmacia.nombre}"></td>
+                    <td>
+                        <a th:href="@{/farmacia/modificar/{id}(id=${farmacia.id})}">Modificar</a>
+                        <a th:href="@{/farmacia/eliminar/{id}(id=${farmacia.id})}">Eliminar</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Total de farmacias: <span th:text="${totalFarmacias}"></span></p>
+    </div>
+    <footer th:replace="~{layout/plantilla :: footer}"></footer>
+</body>
+</html>
