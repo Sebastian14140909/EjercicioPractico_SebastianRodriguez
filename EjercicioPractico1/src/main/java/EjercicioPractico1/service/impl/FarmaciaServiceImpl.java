@@ -1,9 +1,6 @@
 package EjercicioPractico1.service.impl;
 
 
-
-
-
 import EjercicioPractico1.domain.Farmacia;
 import EjercicioPractico1.service.FarmaciaService;
 import org.springframework.stereotype.Service;
